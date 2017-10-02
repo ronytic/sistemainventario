@@ -20,7 +20,7 @@ $men=seleccionar("menu","*","$nu=1 and activo=1 ORDER BY orden");
         <?php if($m['submenu']){?>
             <ul>
               <?php foreach (seleccionar("submenu","*","$nu=1 and codmenu=".$m['codmenu']." and activo=1") as $sb): ?>
-                <li><a href="<?php echo $folder?><?php echo $m['url'] ?><?php echo $sb['url'] ?>"><?php /*<img src="<?php echo $folder; ?>imagenes/ico/<?php echo $sb['imagen']==""?'tick.png':$sb['imagen']; ?>" height="20" align="middle" />*/?> <?php echo $sb['nombre'] ?></a></li>	
+                <li><a href="<?php echo $ruta?><?php echo $m['url'] ?><?php echo $sb['url'] ?>"><?php /*<img src="<?php echo $folder; ?>imagenes/ico/<?php echo $sb['imagen']==""?'tick.png':$sb['imagen']; ?>" height="20" align="middle" />*/?> <?php echo $sb['nombre'] ?></a></li>	
               <?php endforeach ?>
             </ul>
         <?php }?>
@@ -35,8 +35,8 @@ $men=seleccionar("menu","*","$nu=1 and activo=1 ORDER BY orden");
 		<span class="pequenol">Nombre:</span> <?php echo $us['nombre'];?> | 
 		<span class="pequenol">Usuario:</span> <?php echo $us['usuario'];?> |
 		
-		<!--<a href="<?php echo $folder?>usuarios/cambiarp.php?id=<?php echo $_SESSION['cod_usuario']?>" class="enlaceusuario">Cambiar Contraseña</a>-->
-		<a href="<?php echo $folder ?>login/salir.php" class="botonplomo">Salir del Sistema</a>
+		<!--<a href="<?php echo $ruta?>usuarios/cambiarp.php?id=<?php echo $_SESSION['cod_usuario']?>" class="enlaceusuario">Cambiar Contraseña</a>-->
+		<a href="<?php echo $ruta ?>login/salir.php" class="botonplomo">Salir del Sistema</a>
 	</div>
 </div>
 <div class="clear"></div>

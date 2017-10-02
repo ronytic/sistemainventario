@@ -16,11 +16,11 @@ $us=array_shift($us);
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
 <title><?php echo $titulo;?> | <?php echo $title?></title>
-<link href="<?php echo $folder;?>css/960/960.css" type="text/css" rel="stylesheet" media="screen">
-<link href="<?php echo $folder;?>css/tabcontent.css" rel="stylesheet" type="text/css"/>
-<link href="<?php echo $folder;?>css/core.css" type="text/css" rel="stylesheet" media="screen">
-<link href="<?php echo $folder;?>css/menu/styles.css" type="text/css" rel="stylesheet" media="screen">
-<link href="<?php echo $folder;?>css/select2.css" type="text/css" rel="stylesheet">
+<link href="<?php echo $ruta;?>css/960/960.css" type="text/css" rel="stylesheet" media="screen">
+<link href="<?php echo $ruta;?>css/tabcontent.css" rel="stylesheet" type="text/css"/>
+<link href="<?php echo $ruta;?>css/core.css" type="text/css" rel="stylesheet" media="screen">
+<link href="<?php echo $ruta;?>css/menu/styles.css" type="text/css" rel="stylesheet" media="screen">
+<link href="<?php echo $ruta;?>css/select2.css" type="text/css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $folder; ?>imagenes/favicon.ico" />
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/jquery.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/tabcontent.js"></script> 
