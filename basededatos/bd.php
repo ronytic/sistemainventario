@@ -38,7 +38,7 @@ function insertar($nombre_tabla,$datos){
 		array_push($aux_cabecera_vector,$cabecera);
 		array_push($aux_valor_vector,"'".$valor."'");
 	}
-	array_push($aux_cabecera_vector,"cod_usuario");
+	array_push($aux_cabecera_vector,"codusuario");
 	array_push($aux_cabecera_vector,"fecha");
 	array_push($aux_cabecera_vector,"hora");
 	array_push($aux_cabecera_vector,"activo");
