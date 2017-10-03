@@ -6,7 +6,7 @@ include_once("../cabecerahtml.php");
 
 <div class="prefix_3 grid_6">
   <div class="titulo">Listado de Productos</div>
-   <form action="buscar.php" method="post" target="contenido">
+   <form action="buscarproducto.php" method="post" target="contenido">
     <table class="tablareg">
        <tr>
            <td>Nombre Producto:<br>
