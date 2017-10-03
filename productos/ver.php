@@ -7,7 +7,6 @@ $producto=seleccionar("producto","*","codproducto=$codproducto");
 $producto=array_shift($producto);
 
 $direccionqr=$url.$directorio."/venta/ver.php?codigo=".$producto['codigo']. $producto['codproducto'];
-echo $direccionqr;
 //GENERAMOS CODIGO QR
 include_once("phpqrcode/qrlib.php");
 QRcode::png($direccionqr,"qr/".$producto['codigo']. $producto['codproducto'].".png",'L',5,1);
