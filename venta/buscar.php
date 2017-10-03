@@ -16,6 +16,8 @@ $venta=seleccionar("venta","*","codproducto LIKE '$codproducto' and fechaventa L
     <td>Talla</td>
     <td>Detalle</td>
     <td>Cantidad Vendida</td>
+     <td>Precio</td>
+     <td>Total</td>
     <td>Fecha de Venta</td>
     <td></td>
 </tr>
@@ -30,7 +32,9 @@ $producto=seleccionar("producto","*","codproducto LIKE '".$e['codproducto']."' a
     <td><?php echo $p['precio']?></td>
     <td><?php echo $p['talla']?></td>
     <td><?php echo $p['detalle']?></td>
-    <td><?php echo $e['cantidad']?></td>
+    <td class="der"><?php echo $e['cantidad']?></td>
+    <td class="der"><?php echo $e['precio']?></td>
+    <td class="der"><?php echo $e['total']?></td>
     <td><?php echo $e['fechaventa']?></td>
     <td><a href="eliminar.php?codventa=<?php echo $e['codventa']?>" class="botoninfo" target="_parent">Eliminar</a></td>
     </tr>   

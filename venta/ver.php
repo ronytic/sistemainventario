@@ -28,12 +28,23 @@ $stock=$entradasTotales-$salidasTotales;
 
 include_once("../cabecerahtml.php");
 ?>
+<script type="text/javascript">
+var precio=<?php echo $producto['precio']?>;
+$(document).on("ready",function(){
+    $("[name=cantidad]").change(function(){
+        var can=parseFloat($(this).val());
+        var tot=precio*can;
+        $("[name=total]").val(tot)
+    })
+})
+</script>
 <?php include_once("../cabecera.php");?>
 
 <div class="prefix_3 grid_6">
   <div class="titulo">Datos del Producto para la Venta</div>
    <form action="guardar.php" method="post" enctype="multipart/form-data">
    <input type="hidden" name="codproducto" value="<?php echo $codproducto?>">
+   <input type="hidden" name="precio" min="0" max="" value="<?php echo $producto['precio'];?>">
     <table class="tablareg">
        <tr>
            <td>Nombre Producto: <?php echo $producto['nombre']?>
@@ -72,8 +83,26 @@ include_once("../cabecerahtml.php");
        </tr>
        <tr>
            <td colspan="2">
+           TOTAL: <br>
+           <input type="number" name="total" min="0" max="" value="0" readonly>
+           </td>
+       </tr>
+       <tr>
+           <td colspan="2">
            FECHA DE VENTA: <br>
            <input type="date" name="fechaventa" value="<?php echo date("Y-m-d");?>" required>
+           </td>
+       </tr>
+       <tr>
+           <td colspan="2">
+           CI CLIENTE: <br>
+           <input type="text" name="ci"   required>
+           </td>
+       </tr>
+       <tr>
+           <td colspan="2">
+           NOMBRE CLIENTE: <br>
+           <input type="text" name="nombre" required >
            </td>
        </tr>
        <tr>
