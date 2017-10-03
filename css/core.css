@@ -1,4 +1,12 @@
-body{
+@media print{
+    #cssmenu{
+        display: none !important;
+    }
+    body{
+        background-color: blue !important;
+    }
+}
+body.general{
 	background-color:#000;	
 	background-color:#F7F7F7;
 	background-color:#e7ebf2;
