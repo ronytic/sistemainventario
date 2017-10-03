@@ -12,15 +12,15 @@ if(isset($_GET['codigo'])){
 }else{
 $codproducto=$_GET['codproducto'];
 }
-$producto=seleccionar("producto","*","codproducto=$codproducto");
+$producto=seleccionar("producto","*","codproducto=$codproducto and activo=1");
 $producto=array_shift($producto);
 
 
-$entradas=seleccionar("entrada","SUM(cantidad)-SUM(devuelto) as Total","codproducto=$codproducto");
+$entradas=seleccionar("entrada","SUM(cantidad)-SUM(devuelto) as Total","codproducto=$codproducto and activo=1");
 $entradas=array_shift($entradas);
 $entradasTotales=$entradas['Total'];
 
-$salidas=seleccionar("venta","sum(cantidad) as Total","codproducto=$codproducto");
+$salidas=seleccionar("venta","sum(cantidad) as Total","codproducto=$codproducto and activo=1");
 $salidas=array_shift($salidas);
 $salidasTotales=$salidas['Total'];
 
