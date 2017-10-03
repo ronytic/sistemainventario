@@ -6,7 +6,7 @@ $ruta="../"; //DEfiniendo Ruta
 
 //CAPTURA DE DATOS DEL FORMULARIO
 
-
+$codproducto=$_POST['codproducto'];
 $nombre=$_POST['nombre'];
 $marca=$_POST['marca'];
 $precio=$_POST['precio'];
@@ -14,10 +14,7 @@ $talla=$_POST['talla'];
 $detalle=$_POST['detalle'];
 $foto=$_FILES['foto']['name'];
 
-//COPIA DE FOTO
-if($foto!=""){
-    copy($_FILES['foto']['tmp_name'],"../imagenes/productos/".$_FILES['foto']['name']);
-}
+
 
 
 
@@ -34,11 +31,16 @@ $valores=array(
     "talla"=>"$talla",
     "detalle"=>"$detalle",
     "codigo"=>"$codigo",
-    "foto"=>"$foto",
+    
 );
 
+//COPIA DE FOTO
+if($foto!=""){
+    copy($_FILES['foto']['tmp_name'],"../imagenes/productos/".$_FILES['foto']['name']);
+    $valores["foto"]=$foto;
+}
 //GUARDAMOS DATOS
-insertar("producto",$valores);
+actualizar("producto",$valores,"codproducto=$codproducto");
 
 
 

@@ -1,7 +1,7 @@
 <?php
 include_once("../basededatos/bd.php");
 $nombre=$_POST['nombre'];
-$productos=seleccionar("producto","*","nombre LIKE '$nombre%' and activo=1");
+$productos=seleccionar("producto","*","nombre LIKE '$nombre%' and activo=1 ORDER BY nombre");
 
 ?>
 <link href="../css/core.css" type="text/css" rel="stylesheet">
