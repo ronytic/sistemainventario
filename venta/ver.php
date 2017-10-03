@@ -31,7 +31,7 @@ include_once("../cabecerahtml.php");
 <?php include_once("../cabecera.php");?>
 
 <div class="prefix_3 grid_6">
-  <div class="titulo">Datos del Producto</div>
+  <div class="titulo">Datos del Producto para la Venta</div>
    <form action="guardar.php" method="post" enctype="multipart/form-data">
    <input type="hidden" name="codproducto" value="<?php echo $codproducto?>">
     <table class="tablareg">

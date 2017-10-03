@@ -5,7 +5,7 @@ include_once("../cabecerahtml.php");
 <?php include_once("../cabecera.php");?>
 
 <div class="prefix_3 grid_6">
-  <div class="titulo">Listado de Productos</div>
+  <div class="titulo">Listado de Productos para la Venta</div>
    <form action="buscarproducto.php" method="post" target="contenido">
     <table class="tablareg">
        <tr>
