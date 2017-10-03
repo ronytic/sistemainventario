@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once 'basededatos/bd.php';
-
+include_once 'basededatos/config.php';
 $codusuario=$_SESSION['cod_usuario'];
 $nivelusuario=$_SESSION['nivelusuario'];
 
@@ -15,11 +15,11 @@ $us=array_shift($us);
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
-<title><?php echo $titulo;?> | <?php echo $title?></title>
+<title><?php echo $titulo;?></title>
 <link href="<?php echo $ruta;?>css/960/960.css" type="text/css" rel="stylesheet" media="screen">
 <link href="<?php echo $ruta;?>css/tabcontent.css" rel="stylesheet" type="text/css"/>
 <link href="<?php echo $ruta;?>css/core.css" type="text/css" rel="stylesheet" media="screen">
-<link href="<?php echo $ruta;?>css/menu/styles.css" type="text/css" rel="stylesheet" media="screen">
+<link href="<?php echo $ruta;?>css/menu/styles.css" type="text/css" rel="stylesheet">
 <link href="<?php echo $ruta;?>css/select2.css" type="text/css" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="<?php echo $folder; ?>imagenes/favicon.ico" />
 <script language="javascript" type="text/javascript" src="<?php echo $folder;?>js/jquery.js"></script>
