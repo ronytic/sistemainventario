@@ -23,7 +23,7 @@ include_once("../cabecerahtml.php");
            <input type="text" name="precio" value="">
            </td>
        </tr>
-       <tr>
+    <tr>
            <td>Talla Producto:<br>
            <input type="text" name="talla" value="">
            </td>
