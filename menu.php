@@ -12,7 +12,7 @@ $men=seleccionar("menu","*","$nu=1 and activo=1 ORDER BY orden");
 <br>
 <div id='cssmenu'>
 <ul>
-    <li><a href="<?php echo $folder; ?>index.php" class="selected active"><?php /*<img src="<?php echo $folder; ?>imagenes/ico/home2.png" width="40" height="40" align="middle" />*/?>Inicio</a></li>
+    <li><a href="<?php echo $ruta; ?>index.php" class="selected active"><?php /*<img src="<?php echo $folder; ?>imagenes/ico/home2.png" width="40" height="40" align="middle" />*/?>Inicio</a></li>
 <?php 
     $i=1;
     foreach ($men as $m) {$i++;?>
