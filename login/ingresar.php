@@ -10,7 +10,7 @@ if($usuario=="" or $contrasena==""){
 }
 //Consulta de conexión de la BD
 include_once("../basededatos/bd.php");
-$registro=seleccionar("usuario","*","usuario='$usuario' and password=MD5('$contrasena')");
+$registro=seleccionar("usuario","*","usuario='$usuario' and password=MD5('$contrasena') and activo=1");
 $cantidadfilas=count($registro);
 
 if($cantidadfilas==0){//incorrecto
